@@ -8,7 +8,7 @@ public class CheckingAccountTest {
 
 	@Test
 	public void shouldBeZeroBalance() {
-		CheckingAccount underTest = new CheckingAccount();
+		DebitAccount underTest = new CheckingAccount();
 		int balance = underTest.getBalance();
 		Assert.assertEquals(0, balance);
 	}
@@ -16,7 +16,7 @@ public class CheckingAccountTest {
 	@Test
 	public void shouldBe1BalanceAfterDeposit() {
 		// arrange
-		CheckingAccount underTest = new CheckingAccount();
+		DebitAccount underTest = new CheckingAccount();
 
 		// act
 		underTest.depositFunds(1);
@@ -29,7 +29,7 @@ public class CheckingAccountTest {
 	@Test
 	public void shouldBe2BalanceAfter2DepositsOf1Each() {
 		// arrange
-		CheckingAccount underTest = new CheckingAccount();
+		DebitAccount underTest = new CheckingAccount();
 
 		// act
 		underTest.depositFunds(1);
@@ -42,7 +42,7 @@ public class CheckingAccountTest {
 	@Test
 	public void shouldBeAbleToWithdraw() {
 		// arrange
-		CheckingAccount underTest = new CheckingAccount();
+		DebitAccount underTest = new CheckingAccount();
 		//act
 		underTest.depositFunds(2);
 		underTest.withdrawFunds(1);
@@ -54,7 +54,7 @@ public class CheckingAccountTest {
 	@Test
 	public void shouldBeAbleToWithdraw3From5() {
 		// arrange
-		CheckingAccount underTest = new CheckingAccount();
+		DebitAccount underTest = new CheckingAccount();
 		//act
 		underTest.depositFunds(5);
 		underTest.withdrawFunds(3);
