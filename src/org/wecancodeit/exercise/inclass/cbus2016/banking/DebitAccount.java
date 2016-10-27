@@ -2,8 +2,8 @@ package org.wecancodeit.exercise.inclass.cbus2016.banking;
 
 public class DebitAccount extends Account {
 
-	public DebitAccount() {
-		super(name);
+	public DebitAccount(String name, String idNumber, int balance) {
+		super(name,idNumber,balance);
 	}
 
 	public void depositFunds(int transaction) {
