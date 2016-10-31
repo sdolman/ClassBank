@@ -12,7 +12,12 @@ public class DebitAccount extends Account {
 	}
 
 	public void withdrawFunds(int transaction) {
-		balance -= transaction;
+		if (balance >= transaction) {
+			balance -= transaction;
+		}
+		else {
+			balance = 0;
+		}
 	}
 
 }

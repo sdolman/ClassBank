@@ -1,0 +1,1 @@
+@brian We're on the same page, I think. It's an exception if the factory tries to create a savings-type account with a less-than-minimum balance; it would be like a nonsense account. Like @jedduffey the other minimum scenario of a withdr

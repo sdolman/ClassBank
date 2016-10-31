@@ -21,7 +21,7 @@ public class AccountFactory {
 		if (accountType.equalsIgnoreCase("Checking")) {
 			account = createCheckingAccount(name, idNumber, balance);
 		}
-		else if (accountType.equalsIgnoreCase("Savings")) {
+		else if (accountType.equalsIgnoreCase("Savings") && balance >= SavingsAccount.minimumBalance) {
 			account = createSavingsAccount(name, idNumber, balance);
 		}
 		else {

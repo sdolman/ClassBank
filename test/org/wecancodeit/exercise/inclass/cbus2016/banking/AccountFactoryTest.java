@@ -75,5 +75,12 @@ public class AccountFactoryTest {
 		underTest.read(filePath);
 		
 	}
+	
+	@Test(expected=UnsupportedOperationException.class)
+	public void cannotMakeSavingsAccountWithLessThanMinimumBalance() throws IOException {
+		AccountFactory underTest = new AccountFactory();
+		String filePath = "C:\\Users\\WeCanCodeIT\\OneDrive\\Documents\\WeCanCodeIT\\Repo\\java-cbus-in-class-banking\\AccountTestSavingsLessThanMinimum.txt";
+		underTest.read(filePath);
+	}
 
 }
